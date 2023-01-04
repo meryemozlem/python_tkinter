@@ -68,5 +68,18 @@ class MyGUI:
     tkinter.mainloop()
   my_gui=MyGUI()
   
- 
-    
+  #Butona tıklayınca açılan yeni bir bilgi penceresi
+  
+  import tkinter
+  import tkinter.messagebox
+  class MyGUI:
+    def __init__(self):
+      self.main_window=tkinter.Tk()
+      self.myButton=tkinter.Button(self.main_window, text="Tıkla", \command=self.do_something)
+      self.myButton.pack()
+      tkinter.mainloop()
+    def do_something(self):
+    tkinter.messagebox.showinfo('Pencere',"İşlem Onaylandı")
+  my_gui=MyGUI()
+  
+  
