@@ -1,0 +1,72 @@
+#tkinter penceresini açmaya yarayan kod (uyarı penceresi açılır)
+import tkinter
+def main():
+  main_window=tkinter.Tk()
+  tkinter.mainloop()
+main()
+
+#tkinter penceresini açan ve metin ifadesi yazdıran kod
+import tkinter
+class MyGUI:
+  def __init__(self):
+    self.main_window=tkinter.Tk()
+    self.label=tkinter.Label(self.main_window, text="Hello World! I'm Meryem Özlem Aydoğan")
+    self.label.pack()
+    tkinter.mainloop()
+my_gui=MyGUI()
+
+#tkinter penceresini açan ve alt alta 2 metin ifadesi yazdıran kod
+import tkinter
+class MyGUI:
+  def __init__(self):
+    self.main_window=tkinter.Tk()
+    self.label1=tkinter.Label(self.main_window, text="Hello")
+    self.label2=tkinter.Label(self.main_window, text="World")
+    self.label1.pack()
+    self.label2.pack()
+    tkinter.mainloop()
+my_gui=MyGUI()
+
+#tkinter penceresini açan ve metin ifadelerini ekranın sol köşesine yazdıran kod
+import tkinter
+class MyGUI:
+  def __init__(self):
+    self.main_window=tkinter.Tk()
+    self.label1=tkinter.Label(self.main_window, text="Hello")
+    self.label2=tkinter.Label(self.main_window, text="World")
+    self.label1.pack(side="left")
+    #bir ifade sağ tarafta diğer ifade sol tarafta olsun istersek side="right" yazarız ve alttaki ifade kelime bazında üstteki ifadeden önce gelir.
+    self.label2.pack(side="left")
+    tkinter.mainloop()
+ my_gui=MyGUI()
+
+#Alt alta A B C ve yan yana 1 2 3 yazdıran kod
+import tkinter
+class MyGUI:
+  def __init__(self):
+    self.main_window=tkinter.Tk()
+    self.top_frame=tkinter.Frame(self.main_window)
+    self.bottom_frame=tkinter.Frame(self.main_window)
+    self.label1=tkinter.Label(self.top_frame, text="A")
+    self.label2=tkinter.Label(self.top_frame, text="B")
+    self.label3=tkinter.Label(self.top_frame, text="C")
+    
+    self.label1.pack(side='top')
+    self.label2.pack(side='top')
+    self.label3.pack(side='top')
+    
+    #bottom_frame de olabilir
+    self.label4=tkinter.Label(self.top_frame, text="1")
+    self.label5=tkinter.Label(self.top_frame, text="2")
+    self.label6=tkinter.Label(self.top_frame, text="3")
+    
+    self.label4.pack(side="left")
+    self.label5.pack(side="left")
+    self.label6.pack(side="left")
+    self.top_frame.pack()
+    self.bottom_frame.pack()
+    tkinter.mainloop()
+  my_gui=MyGUI()
+  
+ 
+    
